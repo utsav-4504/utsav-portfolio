@@ -299,3 +299,36 @@ section {
   padding-right: 10px;
   border-radius: 50px;
 }
+
+
+@media (max-width: 600px) {
+  /* Center align all text in small screens */
+  .text-center-sm {
+    text-align: center !important;
+  }
+
+  /* Remove margin/padding left/right */
+  .remove-space-sm {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+
+  /* Stack elements */
+  .flex-sm-column {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* Reduce image sizes */
+  .img-fluid-sm {
+    max-width: 80% !important;
+    height: auto !important;
+    margin: auto;
+  }
+
+  .btn-sec {
+    text-align: center !important;
+  }
+}
+
