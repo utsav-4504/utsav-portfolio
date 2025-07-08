@@ -330,5 +330,9 @@ section {
   .btn-sec {
     text-align: center !important;
   }
+  .mx-1 {
+    margin-right: -1px !important;
+    margin-left: 0px !important;
+}
 }
 
