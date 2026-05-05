@@ -1,503 +1,1148 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Utsav Prajapati - Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <title>Utsav Prajapati - Professional MERN Stack Developer</title>
+  <meta name="description" content="Professional MERN Stack Developer specializing in modern web applications, WordPress, and Shopify development.">
+  <meta name="keywords" content="MERN Stack, React, Node.js, MongoDB, WordPress, Shopify, Web Developer">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-
-
-
-
+  <!-- Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
 
   <link rel="stylesheet" href="file.css">
 </head>
 <body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <h3 class="loading-text">Loading Portfolio...</h3>
+    </div>
+  </div>
 
-  <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
-    <div class="container">
-      <a class="navbar-brand" href="#"><span class="main-word">U</span>tsav <span class="main-word">P</span>rajapati</a>
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-       <ul class="navbar-nav">
-  <li class="nav-item"><a class="nav-link" href="#hero"><strong>Home</strong></a></li>
-  <li class="nav-item"><a class="nav-link" href="#about"><strong>About</strong></a></li>
-   <li class="nav-item"><a class="nav-link" href="#services"><strong>Services</strong></a></li>
-  <li class="nav-item"><a class="nav-link" href="#projects"><strong>Projects</strong></a></li>
-  <li class="nav-item"><a class="nav-link" href="#contact"><strong>Contact</strong></a></li>
-</ul>
+  <!-- Navigation -->
+  <nav class="navbar" id="mainNavbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="brand-text">UP</span>
+        <span class="brand-full">Utsav Prajapati</span>
       </div>
+
+      <div class="nav-menu">
+        <a href="#hero" class="nav-link active" data-section="hero">
+          <span class="nav-number">01</span>
+          <span class="nav-text">Home</span>
+        </a>
+        <a href="#about" class="nav-link" data-section="about">
+          <span class="nav-number">02</span>
+          <span class="nav-text">About</span>
+        </a>
+        <a href="#skills" class="nav-link" data-section="skills">
+          <span class="nav-number">03</span>
+          <span class="nav-text">Skills</span>
+        </a>
+        <a href="#services" class="nav-link" data-section="services">
+          <span class="nav-number">04</span>
+          <span class="nav-text">Services</span>
+        </a>
+        <a href="#projects" class="nav-link" data-section="projects">
+          <span class="nav-number">05</span>
+          <span class="nav-text">Projects</span>
+        </a>
+        <a href="#testimonials" class="nav-link" data-section="testimonials">
+          <span class="nav-number">06</span>
+          <span class="nav-text">Testimonials</span>
+        </a>
+        <a href="#education" class="nav-link" data-section="education">
+          <span class="nav-number">07</span>
+          <span class="nav-text">Education</span>
+        </a>
+        <a href="#contact" class="nav-link" data-section="contact">
+          <span class="nav-number">08</span>
+          <span class="nav-text">Contact</span>
+        </a>
+      </div>
+
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="scroll-progress">
+      <div class="scroll-progress-bar"></div>
     </div>
   </nav>
 
-<section id="hero" class="py-5 mt-5">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <p class="lead text-primary">Welcome to my world</p>
-        <h1 class="display-5 fw-bold">Hi, I'm <span class="text-primary">Utsav</span></h1>
-        <h5 class="mb-3 dev"><strong>MERN Stack Developer</strong></h5>
-        <p>
-          Aspiring MERN Stack and WordPress Developer with a solid foundation in
-          HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MongoDB.
-        
-          Experienced in building professional websites usingWordPress and Shopify.
-     
-          Passionate about crafting clean, responsive, and user-centric web experiences.
-
-          Actively seeking opportunities to apply my skills and grow in a dynamic tech environment.
-        </p>
-
-     <div class="btn-sec" style="margin-bottom: 25px;">
-  <a href="mailto:utsavprajapati03@gmail.com" class="btn">Hire Me Now ! <i class="bx bx-right-arrow-alt"></i></a>
-<a href="assets/updated resume.pdf" target="_blank" class="btn btn-primary">
-  <i class="bi bi-box-arrow-up-right"></i> View Resume
-</a>
-
-</div>
-
-      </div>
-
- <div class="col-md-6 text-center">
-  <div class="profile-with-text">
-    
-    <svg viewBox="0 0 200 200" class="circle-text">
-      <defs>
-        <path id="circlePath" d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0" />
-      </defs>
-      <text dy="5" >
-        <textPath href="#circlePath" startOffset="0%">
-          heyyy i'm MERN stack developer 
-        </textPath>
-      </text>
-    </svg>
-
-    <div class="profile-pic-wrapper">
-      <img src="images/4968.JPG" alt="Utsav Prajapati" class="profile-pic" />
-    </div>
-
-  </div>
-</div>
-
-
-</section>
-
-<section id="about" data-aos="fade-up">
-  <div class="container">
-    <h2 class="text-center mb-5  text-primary">About Me</h2>
-    <div class="row align-items-center">
-  <div class="col-md-5 text-center mt-4 mt-md-0">
-        <img src="images/4968.JPG" alt="Utsav Prajapati" class="img-fluid rounded-4 shadow" style="max-width: 100%;height: auto;margin-bottom: 20px;">
-      </div>
-      <div class="col-md-7">
-        <p class="lead">
-          Hello! I'm <strong>Utsav Prajapati</strong>, a passionate <strong>MERN Stack</strong> and 
-          <strong>WordPress / Shopify Developer</strong>. I specialize in building fast, responsive, and visually 
-          engaging websites and web apps using modern technologies like 
-          <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, 
-          <strong>React.js</strong>, <strong>Node.js</strong>, <strong>Express.js</strong>, and 
-          <strong>MongoDB</strong>.
-        </p>
-
-        <p>
-          I also have hands-on experience with <strong>WordPress</strong> and <strong>Shopify</strong>, enabling me
-          to deliver high-performance websites tailored to various client needs.
-        </p>
-
-        <p>
-          I'm always eager to learn, take on new challenges, and stay updated with the latest tech trends. 
-          Let’s work together to bring your ideas to life with modern and clean web solutions!
-        </p>
-
-        <hr />
-        <h5 class="mt-4"><strong>Professional Experience</strong></h5>
-        <h6 class="text-muted">Shopify & WordPress Developer  
-          at <a href="https://rainbowtechweb.com/" target="_blank">Rainbow Tech Web</a>  
-          (Nov 2022 – Apr 2024)</h6>
-        <p class="mt-2">
-          Worked on developing and customizing responsive business and eCommerce websites.
-          My role included creating Shopify stores, customizing WordPress themes, implementing responsive UI,
-          integrating plugins/apps, and ensuring SEO-friendly, fast-loading designs.
-        </p>
-      </div>
-
-    
-
-    </div>
-  </div>
-</section>
-
-<section id="skills" class="py-5 bg-light" data-aos="fade-up">
-  <div class="container">
-    <h2 class="text-center text-primary mb-5"><strong>My Skills</strong></h2>
-    
-    <div class="row">
-      <div class="col-md-6">
-        <div class="skill-item mb-4">
-          <h6 class="mb-1">HTML <span class="float-end skill-percent">0%</span></h6>
-          <div class="progress">
-            <div class="progress-bar bg-primary" role="progressbar" data-value="95"></div>
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="greeting">
+            <span class="greeting-text">Hello, I'm</span>
+            <div class="greeting-cursor"></div>
           </div>
-        </div>
 
-        <div class="skill-item mb-4">
-          <h6 class="mb-1">CSS / Bootstrap <span class="float-end skill-percent">0%</span></h6>
-          <div class="progress">
-            <div class="progress-bar bg-primary" role="progressbar" data-value="90"></div>
+          <h1 class="hero-title">
+            <span class="title-line">
+              <span class="title-word">Utsav</span>
+            </span>
+            <span class="title-line">
+              <span class="title-word">Prajapati</span>
+            </span>
+          </h1>
+
+          <div class="hero-subtitle">
+            <span class="subtitle-text">MERN Stack Developer</span>
+            <div class="subtitle-decoration"></div>
           </div>
-        </div>
 
-        <div class="skill-item mb-4">
-          <h6 class="mb-1">JavaScript <span class="float-end skill-percent">0%</span></h6>
-          <div class="progress">
-            <div class="progress-bar bg-primary" role="progressbar" data-value="85"></div>
-          </div>
-        </div>
-
-        <div class="skill-item mb-4">
-          <h6 class="mb-1">React.js <span class="float-end skill-percent">0%</span></h6>
-          <div class="progress">
-            <div class="progress-bar bg-primary" role="progressbar" data-value="80"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="skill-item mb-4">
-          <h6 class="mb-1">Node.js <span class="float-end skill-percent">0%</span></h6>
-          <div class="progress">
-            <div class="progress-bar bg-primary" role="progressbar" data-value="75"></div>
-          </div>
-        </div>
-
-        <div class="skill-item mb-4">
-          <h6 class="mb-1">Express.js <span class="float-end skill-percent">0%</span></h6>
-          <div class="progress">
-            <div class="progress-bar bg-primary" role="progressbar" data-value="75"></div>
-          </div>
-        </div>
-
-        <div class="skill-item mb-4">
-          <h6 class="mb-1">MongoDB <span class="float-end skill-percent">0%</span></h6>
-          <div class="progress">
-            <div class="progress-bar bg-primary" role="progressbar" data-value="70"></div>
-          </div>
-        </div>
-
-        <div class="skill-item mb-4">
-          <h6 class="mb-1">WordPress / Shopify <span class="float-end skill-percent">0%</span></h6>
-          <div class="progress">
-            <div class="progress-bar bg-primary" role="progressbar" data-value="85"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section id="services" data-aos="zoom-in">
-  <div class="container">
-    <h2 class="text-center mb-5  text-primary"><strong> My Services </strong></h2>
-    <div class="row g-4">
-      
-   
-      <div class="col-md-4">
-        <div class="service-card p-4 bg-white rounded shadow text-center h-100">
-          <div class="icon mb-3 text-primary fs-1">
-            <i class='bx bx-code-alt'></i>
-          </div>
-          <h5 class="mb-3">MERN Stack Development</h5>
-          <p>
-            Building full-stack web applications using MongoDB, Express.js, React.js, and Node.js. Clean code, APIs, dynamic frontend & backend integration.
+          <p class="hero-description">
+            Crafting exceptional digital experiences with modern web technologies.
+            Specialized in MERN Stack, WordPress, and Shopify development.
           </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span class="btn-text">View My Work</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span class="btn-text">Get In Touch</span>
+              <i class="bi bi-envelope"></i>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="2">0</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="15">0</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="100">0</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="profile-container">
+            <div class="profile-bg"></div>
+            <div class="profile-image">
+              <img src="images/4968.JPG" alt="Utsav Prajapati" />
+              <div class="profile-overlay"></div>
+            </div>
+            <div class="floating-elements">
+              <div class="floating-element elem-1">
+                <i class="bx bxl-react"></i>
+              </div>
+              <div class="floating-element elem-2">
+                <i class="bx bxl-nodejs"></i>
+              </div>
+              <div class="floating-element elem-3">
+                <i class="bx bxl-mongodb"></i>
+              </div>
+              <div class="floating-element elem-4">
+                <i class="bx bxl-wordpress"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-     
-      <div class="col-md-4">
-        <div class="service-card p-4 bg-white rounded shadow text-center h-100">
-          <div class="icon mb-3 text-success fs-1">
-            <i class='bx bxl-wordpress'></i>
-          </div>
-          <h5 class="mb-3">WordPress Website Design</h5>
-          <p>
-            Custom, responsive WordPress websites for businesses and portfolios. Theme setup, plugin integration, contact forms, and blog layouts.
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span class="scroll-text">Scroll Down</span>
+      </div>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="hero-bg">
+      <div class="bg-shape shape-1"></div>
+      <div class="bg-shape shape-2"></div>
+      <div class="bg-shape shape-3"></div>
+      <div class="particles-container"></div>
+    </div>
+  </section>
+
+  <!-- Summary Section -->
+  <section id="summary" class="summary-section">
+    <div class="section-container summary-grid">
+      <div class="summary-card">
+        <span class="section-badge">Professional Summary</span>
+        <h2 class="section-title">A results-driven <span class="highlight">MERN Stack Developer</span></h2>
+        <p class="summary-text">
+          I build responsive, high-performance web applications and user-centered digital experiences using React.js, Node.js, Express.js, MongoDB,
+          WordPress, and Shopify. My work focuses on clean architecture, fast load times, and polished UI.
+        </p>
+        <ul class="summary-list">
+          <li>Frontend, backend, and full-stack web development experience</li>
+          <li>Strong skills in React.js, Tailwind CSS, and modern JavaScript</li>
+          <li>Practical experience with WordPress, Shopify, and CMS platforms</li>
+          <li>Passionate about performance, usability, and client success</li>
+        </ul>
+      </div>
+      <div class="summary-metrics">
+        <div class="summary-metric">
+          <span class="metric-value">2+</span>
+          <span class="metric-label">Years Experience</span>
+        </div>
+        <div class="summary-metric">
+          <span class="metric-value">15+</span>
+          <span class="metric-label">Projects Delivered</span>
+        </div>
+        <div class="summary-metric">
+          <span class="metric-value">100%</span>
+          <span class="metric-label">Client Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-badge">About Me</span>
+        <h2 class="section-title">Get to know me <span class="highlight">better</span></h2>
+        <div class="section-decoration"></div>
+      </div>
+
+      <div class="about-content">
+        <div class="about-intro">
+          <h3>Hello! I'm <span class="highlight">Utsav Prajapati</span></h3>
+          <p class="about-description">
+            Results-driven <strong>MERN Stack Developer</strong> with hands-on experience in building responsive web applications,
+            modern dashboards, and e-commerce solutions. I blend strong frontend architecture with backend integration to create
+            fast, scalable, and polished digital products.
           </p>
-        </div>
-      </div>
-
-   
-      <div class="col-md-4">
-        <div class="service-card p-4 bg-white rounded shadow text-center h-100">
-          <div class="icon mb-3 text-warning fs-1">
-            <i class='bx bxl-shopify'></i>
-          </div>
-          <h5 class="mb-3">Shopify Store Setup</h5>
-          <p>
-            Design and setup of Shopify stores, including product pages, themes, payment gateways, and SEO optimization for online businesses.
+          <p class="about-description">
+            My toolkit includes <strong>React.js</strong>, <strong>Node.js</strong>, <strong>Express.js</strong>, <strong>MongoDB</strong>,
+            as well as <strong>WordPress</strong>, <strong>Shopify</strong>, <strong>Tailwind CSS</strong>, and <strong>Bootstrap</strong>.
+            I love solving real problems, improving performance, and delivering seamless user experiences.
           </p>
+
+          <div class="about-details">
+            <div class="detail-item">
+              <div class="detail-icon">
+                <i class="bx bx-user"></i>
+              </div>
+              <div class="detail-content">
+                <h4>Name</h4>
+                <p>Utsav Prajapati</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-icon">
+                <i class="bx bx-map"></i>
+              </div>
+              <div class="detail-content">
+                <h4>Location</h4>
+                <p>India</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-icon">
+                <i class="bx bx-envelope"></i>
+              </div>
+              <div class="detail-content">
+                <h4>Email</h4>
+                <p>utsavprajapati03@gmail.com</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-icon">
+                <i class="bx bx-phone"></i>
+              </div>
+              <div class="detail-content">
+                <h4>Phone</h4>
+                <p>+91 7016891346</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="experience-section">
+            <h4>Professional Experience</h4>
+            <div class="experience-item">
+              <div class="experience-header">
+                <h5>Frontend Developer Internship</h5>
+                <span class="experience-date">Aug 2025 - Nov 2025</span>
+              </div>
+              <div class="experience-company">
+                at <a href="https://technoverse.io" target="_blank">Technoverse Data Science Pvt. Ltd.</a>
+              </div>
+              <p class="experience-description">
+                Developed responsive, user-friendly web interfaces using React.js and Tailwind CSS with seamless cross-browser compatibility.
+                Integrated RESTful APIs for dynamic data handling and collaborated with the team to optimize application performance and workflows.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual">
+          <div class="about-image-container">
+            <div class="about-image-bg"></div>
+            <img src="images/4968.JPG" alt="Utsav Prajapati" class="about-image" />
+            <div class="image-overlay"></div>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">2+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Client Satisfaction</span>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-badge">My Skills</span>
+        <h2 class="section-title">Technologies I <span class="highlight">work with</span></h2>
+        <div class="section-decoration"></div>
+      </div>
 
+      <div class="skills-content">
+        <div class="skills-grid">
+          <div class="skill-category">
+            <div class="category-title">
+              <i class="bx bx-code-alt"></i>
+              Frontend Development
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">HTML5</span>
+                  <span class="skill-percentage">95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 95%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">CSS3 / Bootstrap</span>
+                  <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">JavaScript</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">React.js</span>
+                  <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="skill-category">
+            <div class="category-title">
+              <i class="bx bx-server"></i>
+              Backend Development
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Node.js</span>
+                  <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 75%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Express.js</span>
+                  <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 75%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">MongoDB</span>
+                  <span class="skill-percentage">70%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 70%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">REST APIs</span>
+                  <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="skill-category">
+            <div class="category-title">
+              <i class="bx bx-globe"></i>
+              CMS & E-commerce
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">WordPress</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Shopify</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">WooCommerce</span>
+                  <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 75%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Theme Customization</span>
+                  <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<section id="projects" data-aos="fade-left">
-  <div class="container">
-    <h2 class="text-center mb-4 text-primary"><strong> My Projects </strong></h2>
-
-    <div class="text-center mb-4">
-      <button class="btn btn-outline-dark mx-1 filter-btn active" data-filter="all">All</button>
-      <button class="btn btn-outline-dark mx-1 filter-btn" data-filter="mern">MERN</button>
-      <button class="btn btn-outline-dark mx-1 filter-btn" data-filter="shopify">Shopify</button>
-      <button class="btn btn-outline-dark mx-1 filter-btn" data-filter="wordpress">WordPress</button>
+        <div class="skill-icons">
+          <div class="icon-item">
+            <i class="bx bxl-html5"></i>
+            <span>HTML5</span>
+          </div>
+          <div class="icon-item">
+            <i class="bx bxl-css3"></i>
+            <span>CSS3</span>
+          </div>
+          <div class="icon-item">
+            <i class="bx bxl-javascript"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="icon-item">
+            <i class="bx bxl-react"></i>
+            <span>React</span>
+          </div>
+          <div class="icon-item">
+            <i class="bx bxl-nodejs"></i>
+            <span>Node.js</span>
+          </div>
+          <div class="icon-item">
+            <i class="bx bxl-mongodb"></i>
+            <span>MongoDB</span>
+          </div>
+          <div class="icon-item">
+            <i class="bx bxl-wordpress"></i>
+            <span>WordPress</span>
+          </div>
+          <div class="icon-item">
+            <i class="bx bxl-shopify"></i>
+            <span>Shopify</span>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="row g-4">
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-badge">My Services</span>
+        <h2 class="section-title">What I can do for <span class="highlight">you</span></h2>
+        <div class="section-decoration"></div>
+      </div>
 
-      <div class="col-md-6 col-lg-4 project-item" data-category="mern">
-        <div class="card h-100 shadow">
-          <img src="images/login.jpg" class="card-img-top" alt="Login System">
-          <div class="card-body">
-            <h5 class="card-title">Login System (MERN)</h5>
-            <p class="card-text">Secure login and registration using MongoDB, Express, React, and Node.js.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="bx bx-code-alt"></i>
+          </div>
+          <div class="service-content">
+            <h3>MERN Stack Development</h3>
+            <p>
+              Building full-stack web applications using MongoDB, Express.js, React.js, and Node.js.
+              Clean code, APIs, dynamic frontend & backend integration.
+            </p>
+            <ul class="service-features">
+              <li>Custom Web Applications</li>
+              <li>RESTful API Development</li>
+              <li>Database Design & Integration</li>
+              <li>Real-time Applications</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="bx bxl-wordpress"></i>
+          </div>
+          <div class="service-content">
+            <h3>WordPress Development</h3>
+            <p>
+              Custom, responsive WordPress websites for businesses and portfolios.
+              Theme setup, plugin integration, contact forms, and blog layouts.
+            </p>
+            <ul class="service-features">
+              <li>Custom Theme Development</li>
+              <li>Plugin Integration</li>
+              <li>E-commerce Solutions</li>
+              <li>SEO Optimization</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="bx bxl-shopify"></i>
+          </div>
+          <div class="service-content">
+            <h3>Shopify Store Setup</h3>
+            <p>
+              Design and setup of Shopify stores, including product pages, themes,
+              payment gateways, and SEO optimization for online businesses.
+            </p>
+            <ul class="service-features">
+              <li>Store Design & Setup</li>
+              <li>Custom Theme Development</li>
+              <li>Payment Gateway Integration</li>
+              <li>App Development</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="bx bx-mobile-alt"></i>
+          </div>
+          <div class="service-content">
+            <h3>Responsive Web Design</h3>
+            <p>
+              Creating mobile-first, responsive websites that work perfectly on all devices.
+              Modern UI/UX design with smooth user experiences.
+            </p>
+            <ul class="service-features">
+              <li>Mobile-First Design</li>
+              <li>Cross-Browser Compatibility</li>
+              <li>Performance Optimization</li>
+              <li>Modern UI/UX</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="bx bx-search-alt"></i>
+          </div>
+          <div class="service-content">
+            <h3>SEO Optimization</h3>
+            <p>
+              Implementing SEO best practices to improve website visibility and search engine rankings.
+              Technical SEO, content optimization, and performance improvements.
+            </p>
+            <ul class="service-features">
+              <li>On-Page SEO</li>
+              <li>Technical SEO</li>
+              <li>Performance Optimization</li>
+              <li>Analytics Setup</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="bx bx-support"></i>
+          </div>
+          <div class="service-content">
+            <h3>Maintenance & Support</h3>
+            <p>
+              Ongoing website maintenance, updates, security monitoring, and technical support
+              to keep your website running smoothly and securely.
+            </p>
+            <ul class="service-features">
+              <li>Regular Updates</li>
+              <li>Security Monitoring</li>
+              <li>Performance Optimization</li>
+              <li>Technical Support</li>
+            </ul>
           </div>
         </div>
       </div>
-
-      <div class="col-md-6 col-lg-4 project-item" data-category="mern">
-        <div class="card h-100 shadow">
-          <img src="images/task.jpg" class="card-img-top" alt="Task Manager">
-          <div class="card-body">
-            <h5 class="card-title">Task Management App</h5>
-            <p class="card-text">Task manager built with MERN stack for daily productivity.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4 project-item" data-category="shopify">
-        <div class="card h-100 shadow">
-          <img src="images/img2.jpg" class="card-img-top" alt="The Mahal Fashions">
-          <div class="card-body">
-            <h5 class="card-title">The Mahal Fashions</h5>
-            <p class="card-text">Custom Shopify store built during internship at Rainbow Tech Web.</p>
-            <a href="https://www.themahalfashions.com/" target="_blank" class="btn btn-sm btn-outline-primary">Visit Site</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4 project-item" data-category="shopify">
-        <div class="card h-100 shadow">
-          <img src="images/tinny.jpg" class="card-img-top" alt="TinyTusky Website">
-          <div class="card-body">
-            <h5 class="card-title">TinyTusky</h5>
-            <p class="card-text">Modern Shopify baby care products store with clean UI and eCommerce functionality.</p>
-            <a href="https://www.tinytusky.com/" target="_blank" class="btn btn-sm btn-outline-primary">Visit Site</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4 project-item" data-category="wordpress">
-        <div class="card h-100 shadow">
-          <img src="images/img.jpg" class="card-img-top" alt="Go Aryan Website">
-          <div class="card-body">
-            <h5 class="card-title">Go Aryan</h5>
-            <p class="card-text">Corporate WordPress website created with custom theme and contact form.</p>
-            <a href="https://goaryan.com/" target="_blank" class="btn btn-sm btn-outline-primary">Visit Site</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4 project-item" data-category="wordpress">
-        <div class="card h-100 shadow">
-          <img src="images/pakka.jpg" class="card-img-top" alt="Pakka Foundation">
-          <div class="card-body">
-            <h5 class="card-title">Pakka Foundation</h5>
-            <p class="card-text">NGO WordPress website with donation form and social awareness content.</p>
-            <a href="https://pakka.foundation/" target="_blank" class="btn btn-sm btn-outline-primary">Visit Site</a>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="contact" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center  text-primary"> <strong>Contact Me</strong></h2>
-    <div class="row align-items-center">
-      <div class="col-md-6 mb-4 mb-md-0 text-center">
-        <img src="images/contect-image.png" alt="Contact Illustration" class="img-fluid rounded shadow" style="max-width: 80% ;height: auto;">
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-badge">My Projects</span>
+        <h2 class="section-title">Recent <span class="highlight">work</span></h2>
+        <div class="section-decoration"></div>
       </div>
 
-      <div class="col-md-6 contect-text">
-        <h4 class="mb-3">Have a Project On Your Mind?</h4>
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" id="name" class="form-control" placeholder="Enter your name">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">
+          <span class="filter-text">All Projects</span>
+        </button>
+        <button class="filter-btn" data-filter="mern">
+          <span class="filter-text">MERN Stack</span>
+        </button>
+        <button class="filter-btn" data-filter="shopify">
+          <span class="filter-text">Shopify</span>
+        </button>
+        <button class="filter-btn" data-filter="wordpress">
+          <span class="filter-text">WordPress</span>
+        </button>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card" data-category="mern">
+          <div class="project-image">
+            <img src="images/login.jpg" alt="Schema-Driven Form Engine" />
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#contact" class="project-link" title="Discuss Project">
+                  <i class="bx bx-chat"></i>
+                </a>
+                <a href="#" class="project-link" title="View Code">
+                  <i class="bx bxl-github"></i>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" class="form-control" placeholder="Enter your email">
+          <div class="project-content">
+            <span class="project-category">Frontend</span>
+            <h3 class="project-title">Schema-Driven Form Engine</h3>
+            <p class="project-description">
+              Engineered a dynamic form rendering system using React.js, translating complex JSON schemas into interactive multi-step user interfaces.
+            </p>
+            <ul class="project-highlights">
+              <li>Dynamic schema-based rendering with reusable components</li>
+              <li>Nested validation and conditional field visibility</li>
+              <li>Responsive form flow for desktop and mobile users</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">JSON Schema</span>
+              <span class="tech-tag">Tailwind CSS</span>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea id="message" rows="4" class="form-control" placeholder="Write your message here..."></textarea>
+        </div>
+
+        <div class="project-card" data-category="mern">
+          <div class="project-image">
+            <img src="images/task.jpg" alt="Zauba Clone" />
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#contact" class="project-link" title="Discuss Project">
+                  <i class="bx bx-chat"></i>
+                </a>
+                <a href="#" class="project-link" title="View Code">
+                  <i class="bx bxl-github"></i>
+                </a>
+              </div>
+            </div>
           </div>
-          <button type="submit" class="btn btn-primary">Send</button>
+          <div class="project-content">
+            <span class="project-category">Frontend</span>
+            <h3 class="project-title">Zauba Clone - Corporate Directory</h3>
+            <p class="project-description">
+              Built a searchable corporate data directory with React.js and Tailwind CSS, featuring location-aware filters, company insights, and real-time listing updates.
+            </p>
+            <ul class="project-highlights">
+              <li>Dynamic search and listing interface with filters</li>
+              <li>Responsive information cards and consistent UI styling</li>
+              <li>Optimized for performance and fast load times</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">API Integration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="mern">
+          <div class="project-image">
+            <img src="images/img2.jpg" alt="Web3 News Dashboard" />
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#contact" class="project-link" title="Discuss Project">
+                  <i class="bx bx-chat"></i>
+                </a>
+                <a href="#" class="project-link" title="View Code">
+                  <i class="bx bxl-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Frontend</span>
+            <h3 class="project-title">Web3 News & Crypto Dashboard</h3>
+            <p class="project-description">
+              Designed a modern news dashboard for crypto and Web3 updates, with live feeds, responsive charts, and intuitive browsing features.
+            </p>
+            <ul class="project-highlights">
+              <li>Live news integration and data-driven UI elements</li>
+              <li>Mobile-first dashboard layout with clean typography</li>
+              <li>Accessible, fast-loading interface for crypto audiences</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">Data Visualization</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-badge">Testimonials</span>
+        <h2 class="section-title">What clients <span class="highlight">say</span></h2>
+        <div class="section-decoration"></div>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Utsav delivered an exceptional MERN stack application for our business.
+              His attention to detail and technical expertise exceeded our expectations.
+              The project was completed on time and within budget."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-image">
+                <img src="images/4968.JPG" alt="Client" />
+              </div>
+              <div class="author-info">
+                <h4>Sarah Johnson</h4>
+                <span>CEO, TechStart Inc.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Working with Utsav on our Shopify store was a fantastic experience.
+              He created a beautiful, user-friendly e-commerce site that significantly
+              improved our online sales. Highly recommended!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-image">
+                <img src="images/4968.JPG" alt="Client" />
+              </div>
+              <div class="author-info">
+                <h4>Michael Chen</h4>
+                <span>Owner, FashionHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Utsav transformed our outdated WordPress site into a modern,
+              responsive website. His WordPress expertise and design skills are outstanding.
+              Our website traffic and user engagement have improved dramatically."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-image">
+                <img src="images/4968.JPG" alt="Client" />
+              </div>
+              <div class="author-info">
+                <h4>Emily Rodriguez</h4>
+                <span>Marketing Director, GreenLife NGO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-badge">Education</span>
+        <h2 class="section-title">My <span class="highlight">journey</span></h2>
+        <div class="section-decoration"></div>
+      </div>
+
+      <div class="education-content">
+        <div class="education-timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="bx bx-graduation"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Bachelor of Commerce (B.Com)</h3>
+                <span class="timeline-date">2021 - 2024</span>
+              </div>
+              <div class="timeline-institution">
+                <h4>Hemchandracharya North Gujarat University</h4>
+                <span>Completed Degree with strong academic foundation</span>
+              </div>
+              <p class="timeline-description">
+                Graduated with a focus on business concepts, analytical thinking, and communication skills.
+                This degree provided a strong foundation for building practical, user-oriented web solutions.
+              </p>
+              <div class="timeline-skills">
+                <span class="skill-tag">Business Analysis</span>
+                <span class="skill-tag">Communication</span>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Research</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="bx bx-certificate"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Full Stack Web Development (MERN)</h3>
+                <span class="timeline-date">2024</span>
+              </div>
+              <div class="timeline-institution">
+                <h4>Top Technologies</h4>
+                <span>Advanced Certification</span>
+              </div>
+              <p class="timeline-description">
+                Completed intensive training in MERN stack development, covering React.js, Node.js, Express.js,
+                MongoDB, authentication, and modern frontend/back-end workflows.
+              </p>
+              <div class="timeline-skills">
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">REST APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="bx bx-briefcase"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Frontend Developer Internship</h3>
+                <span class="timeline-date">Aug 2025 - Nov 2025</span>
+              </div>
+              <div class="timeline-institution">
+                <h4>Technoverse Data Science Pvt. Ltd.</h4>
+                <span>Practical internship experience</span>
+              </div>
+              <p class="timeline-description">
+                Built responsive user interfaces with React.js and Tailwind CSS, integrated RESTful APIs, and
+                collaborated closely with designers and developers to optimize application performance.
+              </p>
+              <div class="timeline-skills">
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Tailwind CSS</span>
+                <span class="skill-tag">API Integration</span>
+                <span class="skill-tag">Collaboration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-badge">Contact Me</span>
+        <h2 class="section-title">Let's work <span class="highlight">together</span></h2>
+        <div class="section-decoration"></div>
+      </div>
+
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Have a project on your mind?</h3>
+          <p class="contact-intro">
+            I'm always excited to take on new challenges and collaborate on innovative projects.
+            Whether you need a full-stack web application, a stunning website, or an e-commerce solution,
+            I'd love to hear about your ideas and help bring them to life.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bx bx-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <a href="mailto:utsavprajapati03@gmail.com">utsavprajapati03@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bx bx-phone"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Phone</h4>
+                <a href="tel:+917016891346">+91 7016891346</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bx bx-map"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Location</h4>
+                <span>India</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bx bx-time"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Availability</h4>
+                <span>Available for freelance work</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <h4>Follow Me</h4>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/utsav-prajapati-b68584253/" class="social-link" target="_blank">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+              <a href="https://github.com/utsav-4504" class="social-link" target="_blank">
+                <i class="bx bxl-github"></i>
+              </a>
+              <a href="https://www.instagram.com/utsav_.45" class="social-link" target="_blank">
+                <i class="bx bxl-instagram"></i>
+              </a>
+              <a href="https://wa.me/7016891346" class="social-link" target="_blank">
+                <i class="bx bxl-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            <div class="form-line"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+            <div class="form-line"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+            <div class="form-line"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <div class="form-line"></div>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span>Send Message</span>
+            <i class="bx bx-send"></i>
+          </button>
         </form>
-
-        <div class="mt-5 text-center">
-  <p class="fw-semibold fs-5 mb-3">Connect with me:</p>
-  <div class="d-flex justify-content-center gap-4">
-    <a href="https://www.linkedin.com/in/utsav-prajapati-b68584253/?trk=public-profile-join-page" target="_blank" class="social-icon text-decoration-none">
-      <i class="bi bi-linkedin"></i>
-    </a>
-    <a href="https://github.com/utsav-4504" target="_blank" class="social-icon text-decoration-none">
-      <i class="bi bi-github"></i>
-    </a>
-    <a href="https://www.instagram.com/utsav_.45?igsh=Zmc1aTNuZHoyZGpi" target="_blank" class="social-icon text-decoration-none">
-      <i class="bi bi-instagram"></i>
-    </a>
-  </div>
-</div>
-
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="bg-white text-center py-4 border-top">
-  <div class="container">
-    <p class="mb-0 text-secondary">&copy; 2025 Utsav Prajapati. All rights reserved.</p>
-  </div>
-</footer>
-<a href="https://wa.me/7016891346?text=Hello%2C%20I%20visited%20your%20portfolio%20site%20and%20want%20to%20connect%20with%20you%21"
-   class="whatsapp-float"
-   target="_blank"
-   data-bs-toggle="tooltip"
-   data-bs-placement="left"
-   title="Chat with Utsav">
-  <i class="bi bi-whatsapp"></i>
-</a>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">UP</div>
+          <p>
+            Passionate MERN Stack Developer creating exceptional digital experiences
+            with modern web technologies. Specialized in WordPress and Shopify development.
+          </p>
+        </div>
 
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
 
-</a>
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">MERN Development</a></li>
+            <li><a href="#services">WordPress</a></li>
+            <li><a href="#services">Shopify</a></li>
+            <li><a href="#services">Web Design</a></li>
+            <li><a href="#services">SEO</a></li>
+          </ul>
+        </div>
 
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/utsav-prajapati-b68584253/" target="_blank">
+              <i class="bx bxl-linkedin"></i>
+            </a>
+            <a href="https://github.com/utsav-4504" target="_blank">
+              <i class="bx bxl-github"></i>
+            </a>
+            <a href="https://www.instagram.com/utsav_.45" target="_blank">
+              <i class="bx bxl-instagram"></i>
+            </a>
+            <a href="https://wa.me/7016891346" target="_blank">
+              <i class="bx bxl-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script >
-AOS.init();    
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          &copy; 2025 Utsav Prajapati. All rights reserved.
+        </div>
+        <div class="footer-attribution">
+          Made with <i class="bx bx-heart"></i> using GSAP & Modern Web Technologies
+        </div>
+      </div>
+    </div>
+  </footer>
 
+  <!-- Floating Elements -->
+  <a href="https://wa.me/7016891346?text=Hello%2C%20I%20visited%20your%20portfolio%20site%20and%20want%20to%20connect%20with%20you%21"
+     class="whatsapp-float"
+     target="_blank"
+     title="Chat with Utsav">
+    <i class="bx bxl-whatsapp"></i>
+  </a>
 
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectItems = document.querySelectorAll('.project-item');
+  <button class="back-to-top" title="Back to Top">
+    <i class="bx bx-chevron-up"></i>
+  </button>
 
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const filter = button.getAttribute('data-filter');
-
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-
-      projectItems.forEach(item => {
-        const category = item.getAttribute('data-category');
-        if (filter === 'all' || filter === category) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
-
-
-  const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
-      const sectionHeight = section.clientHeight;
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        current = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href').includes(current)) {
-        link.classList.add('active');
-      }
-    });
-  });
-
-
-
-  AOS.init({
-    duration: 2000,   
-    once: false,      
-  });
-
- const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-  [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
-
-
-   function animateSkills() {
-    const bars = document.querySelectorAll('.progress-bar');
-    const percents = document.querySelectorAll('.skill-percent');
-
-    bars.forEach((bar, index) => {
-      const value = parseInt(bar.getAttribute('data-value'));
-      bar.style.width = value + "%";
-
-      let count = 0;
-      const interval = setInterval(() => {
-        if (count <= value) {
-          percents[index].textContent = count + "%";
-          count++;
-        } else {
-          clearInterval(interval);
-        }
-      }, 20);
-    });
-  }
-
-  let skillsAnimated = false;
-
-  window.addEventListener("scroll", () => {
-    const section = document.querySelector("#skills");
-    const rect = section.getBoundingClientRect();
-
-    if (!skillsAnimated && rect.top < window.innerHeight - 100) {
-      animateSkills();
-      skillsAnimated = true;
-    }
-  });
-
-
-</script>
-
-
-
+  <!-- <script src="file.js"></script> -->
+   <script src="file.js"></script>
 </body>
 </html>
